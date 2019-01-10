@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css" >
+        <title>Hello, world!</title>
+    <link rel="stylesheet" href="calc.css">
+    </head>
+    <body>
+        <div class="container" style="margin-bottom:200px">
+            
+            <div style="margin: 0" class="heading">Calculator</div>
+
+            <div id="display"><p id="res" style="text-align:right"></p></div>
+            <button  class="btn btn-outline-secondary"   id="num-1" onclick="num(this.id)">1</button>
+            <button class="btn btn-outline-secondary"    id="num-2" onclick="num(this.id)">2</button>
+            <button  class="btn btn-outline-secondary" id="num-3" onclick="num(this.id)">3</button>
+            <button class="btn btn-outline-secondary" id="num-4" onclick="num(this.id)">4</button>
+            <button class="btn btn-outline-secondary" id="num-5" onclick="num(this.id)">5</button>
+            <button class="btn btn-outline-secondary" id="num-6" onclick="num(this.id)">6</button>
+            <button class="btn btn-outline-secondary" id="num-7" onclick="num(this.id)">7</button>
+            <button class="btn btn-outline-secondary" id="num-8" onclick="num(this.id)">8</button>
+            <button class="btn btn-outline-secondary" id="num-9" onclick="num(this.id)">9</button>
+            <button class="btn btn-outline-secondary" id="num-0" onclick="num(this.id)">0</button>
+            <button class="btn btn-outline-secondary" id="plus" onclick="num(this.id)">+</button>
+            <button class="btn btn-outline-secondary" id="minus" onclick="num(this.id)">-</button>
+            <button class="btn btn-outline-secondary" id="divide" onclick="num(this.id)">/</button>
+            <button class="btn btn-outline-secondary" id="multiply" onclick="num(this.id)">*</button>
+            <button class="btn btn-outline-secondary" id="equal" onclick="num(this.id)">=</button>
+            <button id="clear" class="btn btn-outline-secondary" onclick="num(this.id)">c</button>
+        </div>
+            
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script>
+        function arithm(o,f,s){
+    if(o=="+"){
+        console.log("inside");
+        console.log(f+s);
+    }
+    else if(o=="-"){
+        return f-s;
+    }
+    else if(o=="*"){
+        return f*s;
+    }
+    else if(o=="/"){
+        return f/s;
+    }
+
+}
+function num(clicked){
+    // console.log(clicked);
+    var x=document.getElementById(clicked).textContent;
+    
+    if(x=='='){ 
+        var term=document.getElementById('res').textContent;
+            // console.log("term--->",term);    
+        var re = new RegExp("(\d+)*([+*/-])(\d+)*");
+        if (re.test(term)) {
+            var op=term.match("([+*/-])")[0];
+            var fterm=term.match("(\d+)*([+*/-])");
+            var ind=fterm.index;
+            var first=term.slice(0,ind);
+            var second=term.slice(ind+1,term.length);
+            console.log(arithm(op,Number(first),Number(second)));
+            result=arithm(op,Number(first),Number(second));
+            document.getElementById('res').textContent+= "=";
+            document.getElementById('res').textContent= result;
+            // if(op=="+"){
+            //     console.log("inside");
+            //     console.log(f+s);
+            // }
+            // else if(op=="-"){
+            //     return f-s;
+            // }
+            // else if(op=="*"){
+            //     return f*s;
+            // }
+            // else if(op=="/"){
+            //     return f/s;
+            }
+        else{
+            console.log("Invalid");
+            }
+            }
+    else if(x=="c"){
+        document.getElementById('res').innerHTML=" ";
+    }        
+    else{
+        document.getElementById('res').textContent +=x;
+         }
+
+}
+
+function arithm(o,f,s){
+    if(o=="+"){
+        return f+s;
+    }
+    else if(o=="-"){
+        return f-s;
+    }
+    else if(o=="*"){
+        return f*s;
+    }
+    else if(o=="/"){
+        return f/s;
+    }
+
+}
+
+
+</script>
+    </body>
+</html>

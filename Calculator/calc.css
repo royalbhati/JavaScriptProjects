@@ -1,0 +1,141 @@
+*{
+   box-sizing: border-box;
+}
+
+body{
+   /* overflow: hidden; */
+}
+.container{
+ padding: 10rem;
+ height: 20%;
+ padding-top:0rem;   
+display: grid;
+grid-template: repeat(10,.8fr)/repeat(4,0.5fr);
+grid-template-areas:
+" h h h h"
+" d d d d"
+"n7 n8 n9 mul"
+"n4 n5 n6 m"
+" n1 n2 n3 p"
+"n0 c e div"
+}
+.heading{
+   /* padding-top:0rem;  */
+   /* margin: 0; */
+   /* padding: 0; */
+   text-align: center;
+   grid-area: h;
+   font-size: 100px;
+}
+
+#display{padding-top:0rem; 
+   grid-area: d;
+   color: #cccdd1;
+   font-size: 100px;
+   text-align: left;
+   text-align: center;
+   background: #181818;
+}
+#num-1  {font-size: 50px;
+   grid-area: n1;
+   text-align: center;
+   background:#cccdd1
+; 
+}
+#num-2 {font-size: 50px;
+   grid-area: n2;
+   text-align: center;
+   background:#cccdd1
+; 
+}
+#num-3 {font-size: 50px;
+   grid-area: n3;
+   text-align: center;
+   background:#cccdd1
+; 
+}
+#num-4 {font-size: 50px;
+   grid-area: n4;
+   text-align: center;
+   background:#cccdd1
+; 
+}
+#num-5 {font-size: 50px;
+   grid-area: n5;
+   text-align: center;
+   background:#cccdd1
+; 
+}
+#num-6 {font-size: 50px;
+   grid-area: n6;
+   text-align: center;
+   background:#cccdd1
+; 
+}
+#num-7 {font-size: 50px;
+   grid-area: n7;
+   text-align: center;
+   background:#cccdd1
+; 
+}
+#num-8 {font-size: 50px;
+   grid-area: n8;
+   text-align: center;
+   background:#cccdd1
+; 
+}
+#num-9 {font-size: 50px;
+   grid-area: n9;
+   text-align: center;
+   background:#cccdd1
+; 
+}
+
+#num-0 {font-size: 50px;
+   grid-area: n0;
+   text-align: center;
+   background:#cccdd1
+; 
+}
+#plus {font-size: 50px;
+   grid-area: p;
+   text-align: center;
+   background:#ff7103
+
+; 
+}
+#minus {font-size: 50px;
+   grid-area:m;
+   text-align: center;
+   background:#ff7103
+
+; 
+}
+#divide {font-size: 50px;
+   grid-area: div;
+   text-align: center;
+   background: #ff7103
+
+; 
+}
+#multiply {font-size: 50px;
+   grid-area:mul;
+   text-align: center;
+   background: #ff7103
+
+   ; 
+}
+#equal {
+   grid-area:e;
+   font-size: 50px;
+   text-align: center;
+   background:#ff7103
+
+   ; 
+}
+#clear{
+   grid-area: c;
+   text-align: center;
+   font-size: 50px;
+   background:#ff7103;
+}
