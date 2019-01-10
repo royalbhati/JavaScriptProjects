@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+        <title>Drum Kit!</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onkeydown="uniCharCode(event)">
+        <img id="bg" src="https://cdn.wallpapersafari.com/54/88/IlAmqU.jpg" alt="" srcset="">
+        
+        <div class="container">
+            
+                <h id="heading">JavaScript DrumKit</h>
+                <hr style="background:orange ; width: 800px; margin-left: 250px">
+                <!-- <hr style="color:orange"> -->
+            <div id="keys">
+                
+            <div id="A" class="btn btn-outline-warning">A</div>
+            <div id="B" class="btn btn-outline-warning">B</div>
+            <div id="C" class="btn btn-outline-warning">C</div>
+            <div id="D" class="btn btn-outline-warning">D</div>
+            <div id="E" class="btn btn-outline-warning">E</div>
+            <div id="F" class="btn btn-outline-warning">F</div>
+            <div id="G" class="btn btn-outline-warning">G</div>
+             </div> 
+        </div>
+        <audio id="electric" controls style="display:none">
+                <source src="Sounds/boom.wav" type="audio/mpeg">
+        </audio> 
+        <audio id="punch" controls style="display:none">
+                <source src="Sounds/hihat.wav" type="audio/mpeg">
+        </audio> 
+        <audio id="whack" controls style="display:none">
+                <source src="Sounds/clap.wav" type="audio/mpeg">
+        </audio> 
+        <audio id="jab" controls style="display:none">
+                <source src="Sounds/kick.wav" type="audio/mpeg">
+        </audio> 
+        <audio id="lhook" controls style="display:none">
+                <source src="Sounds/openhat.wav" type="audio/mpeg">
+        </audio> 
+        <audio id="burp" controls style="display:none">
+                <source src="Sounds/ride.wav" type="audio/mpeg">
+        </audio> 
+        <audio id="fb" controls style="display:none">
+                <source src="Sounds/whip.wav" type="audio/mpeg">
+        </audio> 
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    </body>
+</html>
